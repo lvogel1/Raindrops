@@ -1,0 +1,24 @@
+class Rain {
+  PVector loc, vel;
+  PImage raindrop;
+
+  Rain () {
+    loc = new PVector (random(0, width), random(-1000,0));
+    vel = new PVector (0, 10);
+    raindrop = loadImage ("raindrop.png");
+  }
+
+  void show () {
+    imageMode (CENTER);
+    image (raindrop, loc.x, loc.y,raindrop.width/9,raindrop.height/9);
+  }
+
+  void move () {
+    loc.add(vel);
+  }
+  void reset () {
+    if (loc.y > height+50) {
+      loc.y = 0;
+    }
+  }
+}
