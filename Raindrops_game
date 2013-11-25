@@ -1,0 +1,30 @@
+int num = 100;
+Rain [] fall = new Rain[num];
+Rain h1, h2, h3;
+void setup () {
+  size(1000, 700);
+  for (int i = 0; i < fall.length; i++) {
+    fall[i] = new Rain();
+  }
+  h1 = new Rain ();
+  h2 = new Rain ();
+  h3 = new Rain ();
+}
+
+void draw () {
+  background (255);
+  for (int i = 0; i < fall.length; i++) {
+    fall[i].show();
+    fall[i].move();
+    fall[i].reset();
+  }
+  h1.show();
+  h1.move();
+  h1.reset();
+  h2.show();
+  h2.move();
+  h2.reset();
+  h3.show();
+  h3.move();
+  h3.reset();
+}
