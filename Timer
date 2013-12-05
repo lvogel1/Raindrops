@@ -1,0 +1,16 @@
+class Timer {
+
+  color c;
+  int oldTime;
+
+  Timer () {
+    c = color(55, 0, 55);
+    int oldTime = 0;
+  }
+
+  void show () {
+    textSize (50);
+    fill (0);
+    text(millis()/1000, width-100, 50);
+  }
+}
