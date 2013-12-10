@@ -1,16 +1,17 @@
 class Rain {
   PVector loc, vel;
-  PImage raindrop;
+  int di;
 
   Rain () {
-    loc = new PVector (random(0, width), random(-1000,0));
-    vel = new PVector (0, 10);
-    raindrop = loadImage ("raindrop.png");
+    loc = new PVector (random(0, width-di), random(-1000, 0));
+    vel = new PVector (0, random (1,5));
+    di = 50;
   }
 
   void show () {
-    imageMode (CENTER);
-    image (raindrop, loc.x, loc.y,raindrop.width/9,raindrop.height/9);
+    ellipseMode (CENTER);
+    fill (150, 0, 160);
+    ellipse (loc.x, loc.y, di, di);
   }
 
   void move () {
@@ -21,4 +22,11 @@ class Rain {
       loc.y = 0;
     }
   }
+
+  void check (Catcher c) {
+    if (dist (loc.x, loc.y, c.loc.x, c.loc.y) < (di/2 + c.d/2)) {
+      loc.y = 0;
+    }
+  }
+    
 }
