@@ -8,8 +8,8 @@ class Catcher {
   }
 
   void show () {
-    fill (0);
-    ellipse (mouseX, loc.y, d, d);
+    fill (55, 0, 55);
+    loc.x = mouseX;
+    ellipse (loc.x, loc.y, d, d);
   }
-  
 }
