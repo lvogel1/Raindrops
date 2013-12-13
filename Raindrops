@@ -32,7 +32,7 @@ class Rain {
       score++;
       textSize (50);
       fill (255);
-      text ("Score", width-100, 100);
+      text ("Score", width-200, 100);
         text (score, width-100, 200);
     }
   }
