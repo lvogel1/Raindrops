@@ -1,8 +1,11 @@
 int index = 1;
-int num = 20;
+int num = 10;
 int oldTime = 0;
 int lim = 2000;
+int score;
+
 PImage bk;
+
 //classes
 Catcher c1;
 Timer t1;
@@ -22,6 +25,10 @@ void setup () {
 
 void draw () {
   background (bk);
+  textSize (50);
+  fill (255);
+  text ("Score", width-200, 100);
+  text (score, width-100, 200);
   //more of the array. keeps the raindrops falling
   for (int i = 0; i < index; i++) {
     fall[i].show();
