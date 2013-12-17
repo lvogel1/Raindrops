@@ -14,7 +14,7 @@ Rain [] fall = new Rain[num];
 
 void setup () {
   bk = loadImage ("download.jpg");
-  size(bk.width, bk.height);
+  size(bk.width,bk.height);
   for (int i = 0; i < fall.length; i++) {
     fall[i] = new Rain();
   }
@@ -29,6 +29,7 @@ void draw () {
   fill (255);
   text ("Score", width-200, 100);
   text (score, width-100, 200);
+  
   //more of the array. keeps the raindrops falling
   for (int i = 0; i < index; i++) {
     fall[i].show();
@@ -37,6 +38,7 @@ void draw () {
     fall[i].check(c1);
   }
   c1.show();
+  c1.grow();
   t1.show();
 
   if (millis() - oldTime > lim) {
