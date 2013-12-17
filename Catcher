@@ -1,15 +1,27 @@
 class Catcher {
   PVector loc;
-  int d;
+  PImage plant;
 
   Catcher () {
-    loc = new PVector (mouseX, height-100);
-    d = 100;
+    loc = new PVector (mouseX, height-40);
+    plant = loadImage ("plnt1.png");
   }
 
   void show () {
-    fill (120, 0, 130);
+    imageMode (CENTER);
     loc.x = mouseX;
-    ellipse (loc.x, loc.y, d, d);
+    image (plant, loc.x, loc.y);
+  }
+  //this will cause the plant to 'grow' (change pictures) whenever the score gets within a specified range
+  void grow () {
+    if (score > 5 && score < 10) {
+      plant = loadImage ("plnt2.png");
+      loc.y = height-100;
+    }
+
+    if (score >= 20 && score <= 40) {
+      plant = loadImage ("plnt3.png");
+      loc.y = height-250;
+    }
   }
 }
