@@ -1,27 +1,74 @@
 class Catcher {
   PVector loc;
   PImage plant;
+  int w, h;
 
   Catcher () {
     loc = new PVector (mouseX, height-40);
-    plant = loadImage ("plnt1.png");
+    plant = loadImage ("plant.png");
+    w = plant.width;
+    h = plant.height;
   }
 
   void show () {
     imageMode (CENTER);
     loc.x = mouseX;
-    image (plant, loc.x, loc.y);
+    image (plant, loc.x, loc.y, w, h);
   }
   //this will cause the plant to 'grow' (change pictures) whenever the score gets within a specified range
   void grow () {
-    if (score > 5 && score < 10) {
-      plant = loadImage ("plnt2.png");
-      loc.y = height-100;
+    if (score > 2 && score < 4) {
+      w = 2*plant.width;
+      h = 2*plant.height;
+      loc.y = height-60;
     }
 
-    if (score >= 20 && score <= 40) {
-      plant = loadImage ("plnt3.png");
+    if (score > 6 && score < 8) {
+      w = 3*plant.width;
+      h = 3*plant.height;
+      loc.y = height-80;
+    }
+
+    if (score > 10 && score < 15) {
+      plant = loadImage ("plant2.png");
+      loc.y = height-100;
+      w = plant.width;
+      h = plant.height;
+    }
+
+    if (score > 15 && score < 25) {
+      w = plant.width;
+      h = 3*plant.height/2;
+      loc.y = height-120;
+    }
+
+    if (score >= 25 && score < 35) {
+      w = plant.width;
+      h = 2*plant.height;
+      loc.y = height-170;
+    }
+
+    if (score >= 35 && score <= 60) {
+      plant = loadImage ("plant3.png");
       loc.y = height-250;
+      w = plant.width;
+      h = plant.height;
+    }
+    
+    if (score >= 45 && score < 55) {
+      w = plant.width;
+      h = 3*plant.height/2;
+      loc.y = height-250;
+    }
+    
+    if (score >= 55 && score < 60) {
+      w = plant.width;
+      h = 3*plant.height/2;
+      loc.y = height-350;
+    }
+    
+    if (score >= 60) {
+      background (0);
     }
   }
 }
