@@ -2,18 +2,16 @@ class Rain {
   PImage drop;
   PVector loc, vel;
   int di;
-  int score;
 
   Rain () {
-    loc = new PVector (random(0, width-di), random(-1000, 0));
+    loc = new PVector (random(0, width-di), 0);
     vel = new PVector (0, random (1, 5));
     di = 50;
-    score = 0;
     drop = loadImage ("raindrop.png");
   }
   //there's the actual falling raindrop
   void show () {
-    image (drop, loc.x, loc.y, drop.width/9, drop.height/9);
+    image (drop, loc.x, loc.y, drop.width/11, drop.height/11);
   }
 
   void move () {
@@ -27,14 +25,9 @@ class Rain {
 
   //will check to see if the catcher has caught the raindrop. if so, it will increase the score by 1.
   void check (Catcher c) {
-    if (dist (loc.x, loc.y+10, c.loc.x, c.loc.y) < (di/2 + c.d/2)) {
+    if (dist (loc.x, loc.y+10, c.loc.x, c.loc.y) < (di/2 + c.plant.width/2)) {
       loc.y = 0;
       score++;
-      textSize (50);
-      fill (255);
-      text ("Score", width-200, 100);
-        text (score, width-100, 200);
     }
   }
 }
-
