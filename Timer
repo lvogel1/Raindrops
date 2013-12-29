@@ -1,16 +1,24 @@
+//shows how long you've been playing the game
 class Timer {
 
-  color c;
   int oldTime;
+  PVector loc;
 
   Timer () {
-    c = color(55, 0, 55);
-    int oldTime = 0;
+    oldTime = 0;
+    loc = new PVector (100, 100);
+    c = color (255);
   }
 
   void show () {
-    textSize (25);
-    fill (0);
-    text(millis()/1000, width-100, 50);
+    textSize (50);
+    textAlign (CENTER);
+    fill (c);
+    text ("Timer:", loc.x,loc.y);
+    text(millis()/1000, loc.x+125, loc.y);
+    if (life <= 0) {
+      c = color (0);
+      text(millis()/1000, loc.x, loc.y);
+    }
   }
 }
