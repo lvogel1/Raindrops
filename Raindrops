@@ -4,7 +4,7 @@ class Rain {
   int di;
 
   Rain () {
-    loc = new PVector (random(0, width-di), 0);
+    loc = new PVector (random (0, width), 0);
     vel = new PVector (0, random (1, 5));
     di = 50;
     drop = loadImage ("raindrop.png");
