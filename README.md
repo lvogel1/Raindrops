@@ -8,4 +8,6 @@ If 5 herbicides land on the plant, it dies.
 
 Game is finished. :)
 
-Bugs: Plant doesn't catch at top because it isn't circular.
+Bugs:
+1. Plant doesn't catch at top because it isn't circular.
+2. Font in gameover screen is weird. Not sure why.
