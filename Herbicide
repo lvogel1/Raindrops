@@ -1,0 +1,25 @@
+class Acid {
+  PImage acid;
+  PVector loc, vel;
+  int d;
+
+  Acid () {
+    loc = new PVector (random (0, width), 0);
+    vel = new PVector (0, random (1, 5));
+    d = 50;
+    acid = loadImage ("herbicide.png");
+  }
+  //herbicide will kill the plant
+  void show () {
+    image (acid, loc.x, loc.y, acid.width/8, acid.height/8);
+  }
+
+  void move () {
+    loc.add(vel);
+  }
+  void reset () {
+    if (loc.y > height+50) {
+      loc.y = 0;
+    }
+  }
+}
