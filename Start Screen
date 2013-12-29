@@ -1,1 +1,62 @@
-blah blah
+//start screen
+class Start {
+  int s;
+
+  Start () {
+    s = 15;
+  }
+
+  void show () {
+    fill(55, 0, 55);
+    rect(0, 0, width, height);
+    textAlign(CENTER);
+    fill(150, 0, 160);
+//changes texts' size depending on the time
+
+    if (millis()/1000 >= 2 && millis()/1000 < 3) {
+      s = 25;
+    }
+
+    if (millis()/1000 >= 3 && millis()/1000 < 4) {
+      s = 35;
+    }
+
+    if (millis()/1000 >= 4 && millis()/1000 < 5) {
+      s = 45;
+    }
+
+    if (millis()/1000 >= 5 && millis()/1000 < 6 ) {
+      s = 55;
+    }
+
+    if (millis()/1000 >= 6) {
+      s = 65;
+    }
+    
+    
+    if (millis()/1000 >= 6 && millis()/1000 < 7 ) {
+      s = 65;
+    }
+    
+    if (millis()/1000 >= 7 && millis()/1000 < 8 ) {
+      s = 50;
+    }
+    
+    if (millis()/1000 >= 8 && millis()/1000 < 9 ) {
+      s = 35;
+    }
+
+    if (millis()/1000 >= 10) {
+      s = 70;
+    }
+    
+    if (millis()/1000 < 5) {
+      textSize (s);
+      text("Ready to Garden?", width/2, height/2);
+    }
+    else if (millis()/1000 > 5 && millis()/1000 <=10) {
+      textSize (s);
+      text("Happy Gardening! ^_^", width/2, height/2);
+    }
+  }
+}
