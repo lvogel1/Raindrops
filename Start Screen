@@ -1,4 +1,5 @@
 //start screen
+
 class Start {
   int s;
 
@@ -11,6 +12,7 @@ class Start {
     rect(0, 0, width, height);
     textAlign(CENTER);
     fill(150, 0, 160);
+    
 //changes texts' size depending on the time
 
     if (millis()/1000 >= 2 && millis()/1000 < 3) {
