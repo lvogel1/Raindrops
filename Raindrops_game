@@ -1,16 +1,21 @@
-int index = 1;
-int num = 5;
-int oldTime = 0;
-int lim = 2000;
-int score;
-color c;
+//variables
 
+int index = 1;
+int num = 5;      //array variable
+int oldTime = 0;  //time variable
+int lim = 2000;   //array limit
+int score;        //score variable
+int life;         //life variable
+color c;          //color variable
+
+//background picture
 PImage bk;
 
 //classes
 Catcher c1;
 Timer t1;
 Start s1;
+
 //array for falling raindrops
 Rain [] fall = new Rain[num];
 Acid [] drop = new Acid[num];
@@ -39,23 +44,24 @@ void draw () {
     background (bk);
     textSize (50);
     fill (255);
-    text ("Score", width-200, 100);
-    text (score, width-100, 200);
+    textAlign (CENTER);
+    text ("Score:", width-200, 100);
+    text (score, width-75, 100);
 
-    //more of the array. keeps the raindrops falling
+    //keeps the raindrops falling
     for (int i = 0; i < index; i++) {
       fall[i].show();
       fall[i].move();
       fall[i].reset();
       fall[i].check(c1);
     }
-    
+    //keeps acid falling
     for (int i = 0; i < index; i++) {
       drop[i].show();
       drop[i].move();
       drop[i].reset();
+      drop[i].check(c1);
     }
-    
     c1.show();
     c1.grow();
     t1.show();
@@ -68,4 +74,3 @@ void draw () {
     }
   }
 }
-
