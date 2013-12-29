@@ -1,12 +1,18 @@
 //variables
 
 int index = 1;
-int num = 5;      //array variable
-int oldTime = 0;  //time variable
-int lim = 2000;   //array limit
-int score;        //score variable
-int life;         //life variable
-color c;          //color variable
+//array variable
+int num = 5;
+//time variable
+int oldTime = 0; 
+//array limit
+int lim = 2000;
+//score variable
+int score;
+//life variable
+int life;
+//color variable
+color c;          
 
 //background picture
 PImage bk;
@@ -23,6 +29,7 @@ Acid [] drop = new Acid[num];
 void setup () {
   bk = loadImage ("download.jpg");
   size(bk.width, bk.height);
+  
   for (int i = 0; i < fall.length; i++) {
     fall[i] = new Rain();
   }
