@@ -15,60 +15,64 @@ class Catcher {
     loc.x = mouseX;
     image (plant, loc.x, loc.y, w, h);
   }
-  //this will cause the plant to 'grow' (change pictures) whenever the score gets within a specified range
+  //this will cause the plant to 'grow' (change pictures or size) whenever the score gets within a specified range
   void grow () {
-    if (score > 2 && score < 4) {
+    if (score > 11 && score < 13) {
       w = 2*plant.width;
       h = 2*plant.height;
       loc.y = height-60;
     }
 
-    if (score > 6 && score < 8) {
+    if (score > 13 && score < 15) {
       w = 3*plant.width;
       h = 3*plant.height;
       loc.y = height-80;
     }
 
-    if (score > 10 && score < 15) {
+    if (score > 15 && score < 21) {
       plant = loadImage ("plant2.png");
       loc.y = height-100;
       w = plant.width;
       h = plant.height;
     }
 
-    if (score > 15 && score < 25) {
+    if (score > 21 && score < 32) {
       w = plant.width;
       h = 3*plant.height/2;
       loc.y = height-120;
     }
 
-    if (score >= 25 && score < 35) {
+    if (score >= 32 && score < 42) {
       w = plant.width;
       h = 2*plant.height;
       loc.y = height-170;
     }
 
-    if (score >= 35 && score <= 60) {
+    if (score >= 42 && score <= 62) {
       plant = loadImage ("plant3.png");
       loc.y = height-250;
       w = plant.width;
       h = plant.height;
     }
     
-    if (score >= 45 && score < 55) {
+    if (score >= 52 && score < 62) {
       w = plant.width;
       h = 3*plant.height/2;
       loc.y = height-250;
     }
     
-    if (score >= 55 && score < 60) {
+    if (score >= 62) {
       w = plant.width;
       h = 3*plant.height/2;
       loc.y = height-350;
     }
     
-    if (score >= 60) {
+    if (score >= 57) {
       background (0);
+      c = color (0);
+      textSize (25);
+      fill (120,0,130);
+      text ("Congratulations, you've managed not to kill the plant. :D", width/6,height/2);
     }
   }
 }
