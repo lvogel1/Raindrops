@@ -10,4 +10,4 @@ Game is finished. :)
 
 Bugs:
 1. Plant doesn't catch at top because it isn't circular.
-2. Font in gameover screen is weird. Not sure why.
+2. Font in gameover screen is weird. Not sure why.  -  fixed
