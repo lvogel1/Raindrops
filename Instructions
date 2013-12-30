@@ -3,14 +3,18 @@ class Help {
 
   Help () {
     x = width/2;
+    //instructions will start below screen
     y = height+100;
   }
 
   void scroll () {
     background (55, 0, 55);
     fill (150, 0, 160);
-    textSize (25);
+    textSize (45);
     textAlign (CENTER);
+    //text will be spaced properly
+    text ("Make sure your speakers are blasting! :D", width/2, y-100); 
+    textSize (25);
     text ("Welcome to Gardening 101! :D", x, y);
     text ("For this game,", x, y+50);
     text ("you move the plant on the bottom of your screen with your mouse.", x, y+100);
@@ -18,6 +22,7 @@ class Help {
     text ("Avoid the herbicide. It'll kill your plant.", x, y+200);
     text ("The higher the plant grows,", x, y+250);
     text ("the closer you are to winning!", x, y+300);
+    //text will slowly travel up the screen
     y -= 1;
   }
 }
