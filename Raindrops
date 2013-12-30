@@ -9,7 +9,6 @@ class Rain {
     di = 50;
     drop = loadImage ("raindrop.png");
   }
-  
   //there's the actual falling raindrop
   void show () {
     image (drop, loc.x, loc.y, drop.width/11, drop.height/11);
