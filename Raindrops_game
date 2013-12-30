@@ -28,6 +28,11 @@ Over o1;
 Rain [] fall = new Rain[num];
 Acid [] drop = new Acid[num];
 
+//music stuff
+import ddf.minim.*;
+Minim minim;
+AudioPlayer music;
+
 void setup () {
   bk = loadImage ("download.jpg");
   size(bk.width, bk.height);
@@ -45,6 +50,12 @@ void setup () {
   s1 = new Start ();
   h1 = new Help ();
   o1 = new Over ();
+  
+  //loading music into sketch
+  minim = new Minim(this);
+  music = minim.loadFile("marcus_kellis_theme.mp3");
+  //playing the music
+  music.play();
 }
 
 void draw () {
