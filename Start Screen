@@ -12,7 +12,7 @@ class Start {
     textAlign(CENTER);
     fill(150, 0, 160);
 
-    //changes texts' size depending on the time
+    //changes text size depending on the time
 
     if (millis()/1000 >= 15 && millis()/1000 < 17) {
       s = 25;
