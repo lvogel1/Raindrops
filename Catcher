@@ -15,7 +15,7 @@ class Catcher {
     loc.x = mouseX;
     image (plant, loc.x, loc.y, w, h);
   }
-  //this will cause the plant to 'grow' (change pictures or size) whenever the score gets within a specified range
+  //this will cause the plant to 'grow' (change pictures or size) gradually whenever the score gets within a specified range
   void grow () {
     if (score > 11 && score < 13) {
       w = 2*plant.width;
@@ -28,7 +28,7 @@ class Catcher {
       h = 3*plant.height;
       loc.y = height-80;
     }
-
+//here, plant2 is loaded instead of plant
     if (score > 15 && score < 21) {
       plant = loadImage ("plant2.png");
       loc.y = height-100;
@@ -47,7 +47,7 @@ class Catcher {
       h = 2*plant.height;
       loc.y = height-170;
     }
-
+//here, plant3 is loaded instead of plant2
     if (score >= 42 && score <= 62) {
       plant = loadImage ("plant3.png");
       loc.y = height-250;
