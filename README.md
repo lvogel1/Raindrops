@@ -11,3 +11,4 @@ Game is finished. :)
 Bugs:
 1. Plant doesn't catch at top because it isn't circular.
 2. Font in gameover screen is weird. Not sure why.  -  fixed
+3. Music sometimes lags awkwardly towards the middle of the game.
