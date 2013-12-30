@@ -21,6 +21,7 @@ PImage bk;
 Catcher c1;
 Timer t1;
 Start s1;
+Help h1;
 
 //array for falling raindrops
 Rain [] fall = new Rain[num];
@@ -41,12 +42,17 @@ void setup () {
   c1 = new Catcher ();
   t1 = new Timer ();
   s1 = new Start ();
+  h1 = new Help ();
 }
 
 void draw () {
-  if (millis()/1000 < 10) {
+  if (millis()/1000 < 15) {
+    h1.scroll();
+  }
+  else if (millis()/1000 >= 15 && millis()/1000 <= 25 ) {
     s1.show();
   }
+  
   else {
     background (bk);
     textSize (50);
