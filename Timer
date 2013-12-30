@@ -17,7 +17,9 @@ class Timer {
     text ("Timer:", loc.x,loc.y);
     text(millis()/1000, loc.x+125, loc.y);
     if (life <= 0) {
+    //color change so it blends into background
       c = color (0);
+      //moves timer so it doesn't negative affect the red text
       loc.y = height + 500;
       text(millis()/1000, loc.x, loc.y);
     }
