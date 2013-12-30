@@ -18,6 +18,7 @@ class Timer {
     text(millis()/1000, loc.x+125, loc.y);
     if (life <= 0) {
       c = color (0);
+      loc.y = height + 500;
       text(millis()/1000, loc.x, loc.y);
     }
   }
