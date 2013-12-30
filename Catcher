@@ -54,26 +54,17 @@ class Catcher {
       w = plant.width;
       h = plant.height;
     }
-    
+
     if (score >= 52 && score < 62) {
       w = 3*plant.width/4;
       h = 3*plant.height/2;
       loc.y = height-250;
     }
-    
+
     if (score >= 62) {
       w = 3*plant.width/4;
       h = 3*plant.height/2;
       loc.y = height-350;
-    }
-    
-    if (score >= 57) {
-      background (0);
-      c = color (0);
-      textSize (25);
-      fill (120,0,130);
-      textAlign (CORNER);
-      text ("Congratulations, you've managed not to kill the plant. :D", width/6,height/2);
     }
   }
 }
