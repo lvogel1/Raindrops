@@ -1,0 +1,23 @@
+class Help {
+  int x, y;
+
+  Help () {
+    x = width/2;
+    y = height+100;
+  }
+
+  void scroll () {
+    background (55, 0, 55);
+    fill (150, 0, 160);
+    textSize (25);
+    textAlign (CENTER);
+    text ("Welcome to Gardening 101! :D", x, y);
+    text ("For this game,", x, y+50);
+    text ("you move the plant on the bottom of your screen with your mouse.", x, y+100);
+    text ("Get as many raindrops as you can!", x, y+150);
+    text ("Avoid the herbicide. It'll kill your plant.", x, y+200);
+    text ("The higher the plant grows,", x, y+250);
+    text ("the closer you are to winning!", x, y+300);
+    y -= 1;
+  }
+}
