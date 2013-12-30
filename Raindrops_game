@@ -22,6 +22,7 @@ Catcher c1;
 Timer t1;
 Start s1;
 Help h1;
+Over o1;
 
 //array for falling raindrops
 Rain [] fall = new Rain[num];
@@ -43,6 +44,7 @@ void setup () {
   t1 = new Timer ();
   s1 = new Start ();
   h1 = new Help ();
+  o1 = new Over ();
 }
 
 void draw () {
@@ -78,6 +80,7 @@ void draw () {
     c1.show();
     c1.grow();
     t1.show();
+    o1.show();
 
     if (millis() - oldTime > lim) {
       if (index < fall.length) {
