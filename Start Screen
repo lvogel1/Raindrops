@@ -1,5 +1,4 @@
 //start screen
-
 class Start {
   int s;
 
@@ -12,51 +11,51 @@ class Start {
     rect(0, 0, width, height);
     textAlign(CENTER);
     fill(150, 0, 160);
-    
-//changes texts' size depending on the time
 
-    if (millis()/1000 >= 2 && millis()/1000 < 3) {
+    //changes texts' size depending on the time
+
+    if (millis()/1000 >= 15 && millis()/1000 < 17) {
       s = 25;
     }
 
-    if (millis()/1000 >= 3 && millis()/1000 < 4) {
+    if (millis()/1000 >= 17 && millis()/1000 < 18) {
       s = 35;
     }
 
-    if (millis()/1000 >= 4 && millis()/1000 < 5) {
+    if (millis()/1000 >= 18 && millis()/1000 < 19) {
       s = 45;
     }
 
-    if (millis()/1000 >= 5 && millis()/1000 < 6 ) {
+    if (millis()/1000 >= 19 && millis()/1000 < 20) {
       s = 55;
     }
 
-    if (millis()/1000 >= 6) {
+    if (millis()/1000 >= 20) {
       s = 65;
     }
-    
-    
-    if (millis()/1000 >= 6 && millis()/1000 < 7 ) {
+
+
+    if (millis()/1000 >= 20 && millis()/1000 < 21 ) {
       s = 65;
     }
-    
-    if (millis()/1000 >= 7 && millis()/1000 < 8 ) {
+
+    if (millis()/1000 >= 21 && millis()/1000 < 22) {
       s = 50;
     }
-    
-    if (millis()/1000 >= 8 && millis()/1000 < 9 ) {
+
+    if (millis()/1000 >= 22 && millis()/1000 < 23) {
       s = 35;
     }
 
-    if (millis()/1000 >= 10) {
+    if (millis()/1000 >= 23) {
       s = 70;
     }
-    
-    if (millis()/1000 < 5) {
+
+    if (millis()/1000 > 15 && millis()/1000 <= 20) {
       textSize (s);
       text("Ready to Garden?", width/2, height/2);
     }
-    else if (millis()/1000 > 5 && millis()/1000 <=10) {
+    else if (millis()/1000 >=20 && millis()/1000 < 25) {
       textSize (s);
       text("Happy Gardening! ^_^", width/2, height/2);
     }
