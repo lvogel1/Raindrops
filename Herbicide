@@ -8,6 +8,7 @@ class Acid {
     vel = new PVector (0, random (1, 3));
     d = 50;
     acid = loadImage ("herbicide.png");
+    //number of lives you start with
     life = 5;
   }
 
@@ -16,6 +17,7 @@ class Acid {
     textAlign (CENTER);
     fill (255,0,0);
     textSize (50);
+    //displays your remaining lives
     text ("Lives:", width/2-30, 100);
     text (life, width/2+70, 100);
   }
@@ -31,10 +33,12 @@ class Acid {
 
   void check (Catcher c) {
     if (dist (loc.x, loc.y+10, c.loc.x, c.loc.y) < (d/2 + c.plant.width/2)) {
+      //
       loc.y = 0;
+      //life decreases by one every time an herbicide hits the plant
       life -= 1;
     }
-
+//bad gameover screen
     if (life <= 0) {
       background (0);
       textSize (35);
