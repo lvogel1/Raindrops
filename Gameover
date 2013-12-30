@@ -1,0 +1,16 @@
+class Over {
+
+  Over () {
+  }
+
+  void show () {
+    if (score >= 57) {
+      background (0);
+      c = color (0);
+      textSize (25);
+      fill (120, 0, 130);
+      textAlign (CORNER);
+      text ("Congratulations, you've managed not to kill the plant. :D", width/6, height/2);
+    }
+  }
+}
